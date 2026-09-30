@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Francesco Benocci</title>
+<meta name="description" content="Francesco Benocci, Research Fellow at ISTI-CNR. Approximate nearest neighbor search, vector indexes, agentic search.">
+<link rel="canonical" href="https://fbenocci.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Francesco Benocci">
+<meta property="og:description" content="Research Fellow at ISTI-CNR, Pisa. Approximate nearest neighbor search, compressed graph indexes, agentic search.">
+<meta property="og:url" content="https://fbenocci.github.io/">
+<meta property="og:image" content="https://fbenocci.github.io/assets/avatar.jpg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="400">
+<meta property="og:image:alt" content="Francesco Benocci">
+<meta property="profile:first_name" content="Francesco">
+<meta property="profile:last_name" content="Benocci">
+<meta name="twitter:card" content="summary">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Francesco Benocci",
+  "url": "https://fbenocci.github.io/",
+  "image": "https://fbenocci.github.io/assets/avatar.jpg",
+  "jobTitle": "Research Fellow",
+  "email": "mailto:francesco.benocci@isti.cnr.it",
+  "worksFor": {
+    "@type": "ResearchOrganization",
+    "name": "Institute of Information Science and Technologies (ISTI-CNR)",
+    "url": "https://www.isti.cnr.it/"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Pisa",
+    "url": "https://www.unipi.it/"
+  },
+  "knowsAbout": ["Approximate nearest neighbor search", "Graph-based indexes", "Index compression", "Agentic search", "Information retrieval"],
+  "sameAs": [
+    "https://orcid.org/0009-0001-5780-8954",
+    "https://www.linkedin.com/in/francesco-benocci-bb6216389/",
+    "https://github.com/FBenocci"
+  ]
+}
+</script>
+<script>try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <a class="brand" href="#home">F. Benocci</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Research Fellow · ISTI-CNR, Pisa</p>
+      <h1>Francesco Benocci</h1>
+      <p class="rotator">I work on <span id="rotate" class="rot-word">approximate nearest neighbor search</span></p>
+      <div class="icons">
+        <a href="mailto:francesco.benocci@isti.cnr.it" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+        <a href="https://github.com/FBenocci" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>GitHub</a>
+        <a href="https://orcid.org/0009-0001-5780-8954" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h4M7 14h6M16 10v4"/></svg>ORCID</a>
+        <a href="https://www.linkedin.com/in/francesco-benocci-bb6216389/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></svg>LinkedIn</a>
+      </div>
+    </div>
+    <div class="avatar">
+      <span>FB</span>
+      <img src="assets/avatar.jpg" alt="Francesco Benocci" onerror="this.remove()">
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about" class="reveal">
+  <h2>About</h2>
+  <div class="about-grid">
+    <div>
+      <p>I am a Research Fellow at the Institute of Information Science and Technologies (ISTI) of the Italian National Research Council (CNR) in Pisa, where I work in the HORIZON HPC laboratory. My research is on approximate nearest neighbor search, mostly graph-based indexes.</p>
+      <p>My current interest is agentic search, where the queries hitting a retrieval system are issued by LLM agents instead of people, and what that changes in the design of the index.</p>
+    </div>
+    <aside>
+      <h3>Research interests</h3>
+      <ul class="chips">
+        <li>Approximate nearest neighbor search</li>
+        <li>Graph-based indexes</li>
+        <li>Index compression</li>
+        <li>Agentic search</li>
+        <li>Information retrieval</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="publications" class="reveal">
+  <h2>Publications</h2>
+<!-- PUBS:START -->
+<h3 class="pub-year">2026</h3>
+<ol class="pubs">
+<li class="pub" id="benocci2026graphcompression">
+  <div class="pub-badges"><span class="badge">CIKM 2026</span><span class="badge soft">Applied Research Track</span></div>
+  <div class="pub-title">Lossless Compression of Proximity Graph Indexes for Efficient Approximate Nearest Neighbors Search</div>
+  <div class="pub-authors"><strong>Francesco Benocci</strong>, Leonard Dahlmann, Francesco Gargiulo, Tobias Heuer, Silvio Martinico, Franco Maria Nardini, Cosimo Rulli, Rossano Venturini</div>
+  <div class="pub-venue">Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM)</div>
+  <div class="pub-links"><details><summary>BibTeX</summary><pre>@inproceedings{benocci2026graphcompression,
+	title = {Lossless Compression of Proximity Graph Indexes for Efficient Approximate Nearest Neighbors Search},
+	author = {Francesco Benocci and Leonard Dahlmann and Francesco Gargiulo and Tobias Heuer and Silvio Martinico and Franco Maria Nardini and Cosimo Rulli and Rossano Venturini},
+	booktitle = {Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM)},
+	year = {2026},
+}</pre></details></div>
+</li>
+</ol>
+<!-- PUBS:END -->
+</section>
+
+<section id="experience" class="reveal">
+  <h2>Experience</h2>
+
+  <h3 class="sub">Work</h3>
+  <ol class="timeline">
+    <li>
+      <span class="when">May 2026 – present</span>
+      <div class="what">Research Fellow</div>
+      <div class="where">ISTI-CNR, Pisa · HORIZON HPC</div>
+      <p>Supervisor: Franco Maria Nardini. Compressed indexes for high-dimensional vectors, graph-based ANN search, and retrieval infrastructure for agentic search workloads.</p>
+    </li>
+    <li>
+      <span class="when">2024</span>
+      <div class="what">Teaching Assistant, Laboratory 1</div>
+      <div class="where">University of Pisa</div>
+      <p>JavaScript and TypeScript exercises for first-year students (Feb–May and Sep–Dec 2024).</p>
+    </li>
+    <li>
+      <span class="when">Sep – Nov 2022</span>
+      <div class="what">Intern</div>
+      <div class="where">Inera S.r.l.</div>
+      <p>Built the accommodation section of the VisitTuscany portal with OpenCMS and migrated the legacy data with Talend.</p>
+    </li>
+  </ol>
+
+  <h3 class="sub">Education</h3>
+  <ol class="timeline">
+    <li>
+      <span class="when">2023 – 2026</span>
+      <div class="what">M.Sc. in Computer Science</div>
+      <div class="where">University of Pisa · ICT Solutions Architect curriculum</div>
+      <p>110/110 cum laude. Thesis: <em>Structure-Aware Lossless Compression of HNSW Graphs</em>. Advisors: Rossano Venturini, Franco Maria Nardini.</p>
+    </li>
+    <li>
+      <span class="when">2019 – 2023</span>
+      <div class="what">B.Sc. in Computer Science</div>
+      <div class="where">University of Pisa</div>
+      <p>Thesis: <em>Development of a website using a Java-based CMS</em>, from an internship at Inera S.r.l.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+  <div class="cards">
+    <a class="card" href="https://github.com/TusKANNy/kannolo">
+      <span class="card-kicker">Rust · Open source</span>
+      <span class="card-title">Compressed HNSW graphs in kANNolo</span>
+      <span class="card-text">Lossless compression of HNSW adjacency lists with StreamVByte and Enhanced Graph Bisection, now a stable feature of kANNolo and Vectorium.</span>
+      <span class="card-arrow">↗</span>
+    </a>
+    <a class="card" href="https://github.com/TusKANNy/awesome-agentic-search">
+      <span class="card-kicker">Resource list</span>
+      <span class="card-title">Awesome Retrieval for Agentic Search</span>
+      <span class="card-text">An annotated list of papers on the retrieval side of agentic search, from retriever training to direct corpus interaction.</span>
+      <span class="card-arrow">↗</span>
+    </a>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <div class="contact-box">
+    <p>Institute of Information Science and Technologies (ISTI-CNR)<br>Via G. Moruzzi 1, 56124 Pisa, Italy<br>Room C-26</p>
+    <a class="mail" href="mailto:francesco.benocci@isti.cnr.it">francesco.benocci@isti.cnr.it</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 Francesco Benocci</span>
+  <span>Last updated September 2026</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
