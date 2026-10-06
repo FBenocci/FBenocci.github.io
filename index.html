@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Francesco Benocci</title>
-<meta name="description" content="Francesco Benocci, Research Fellow at ISTI-CNR. Approximate nearest neighbor search, vector indexes, agentic search.">
+<meta name="description" content="Francesco Benocci, PhD student in Computer Science at the University of Pisa and ISTI-CNR. Retrieval for agentic search, approximate nearest neighbor search, graph-based indexes.">
 <link rel="canonical" href="https://fbenocci.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -13,11 +13,11 @@
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Francesco Benocci">
-<meta property="og:description" content="Research Fellow at ISTI-CNR, Pisa. Approximate nearest neighbor search, compressed graph indexes, agentic search.">
+<meta property="og:description" content="PhD student in Computer Science at the University of Pisa and ISTI-CNR. Retrieval for agentic search, approximate nearest neighbor search, graph-based indexes.">
 <meta property="og:url" content="https://fbenocci.github.io/">
 <meta property="og:image" content="https://fbenocci.github.io/assets/avatar.jpg">
-<meta property="og:image:width" content="400">
-<meta property="og:image:height" content="400">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
 <meta property="og:image:alt" content="Francesco Benocci">
 <meta property="profile:first_name" content="Francesco">
 <meta property="profile:last_name" content="Benocci">
@@ -30,19 +30,26 @@
   "name": "Francesco Benocci",
   "url": "https://fbenocci.github.io/",
   "image": "https://fbenocci.github.io/assets/avatar.jpg",
-  "jobTitle": "Research Fellow",
+  "jobTitle": "PhD Student",
   "email": "mailto:francesco.benocci@isti.cnr.it",
-  "worksFor": {
-    "@type": "ResearchOrganization",
-    "name": "Institute of Information Science and Technologies (ISTI-CNR)",
-    "url": "https://www.isti.cnr.it/"
-  },
+  "affiliation": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Pisa, Department of Computer Science",
+      "url": "https://www.di.unipi.it/"
+    },
+    {
+      "@type": "ResearchOrganization",
+      "name": "Institute of Information Science and Technologies (ISTI-CNR)",
+      "url": "https://www.isti.cnr.it/"
+    }
+  ],
   "alumniOf": {
     "@type": "CollegeOrUniversity",
     "name": "University of Pisa",
     "url": "https://www.unipi.it/"
   },
-  "knowsAbout": ["Approximate nearest neighbor search", "Graph-based indexes", "Index compression", "Agentic search", "Information retrieval"],
+  "knowsAbout": ["Agentic search", "Information retrieval", "Approximate nearest neighbor search", "Graph-based indexes", "Index compression"],
   "sameAs": [
     "https://orcid.org/0009-0001-5780-8954",
     "https://www.linkedin.com/in/francesco-benocci-bb6216389/",
@@ -55,7 +62,7 @@
 <body>
 
 <nav class="topbar">
-  <a class="brand" href="#home">F. Benocci</a>
+  <a class="brand" href="#home" aria-label="Francesco Benocci, back to top">FB</a>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#publications">Publications</a>
@@ -73,9 +80,9 @@
   <div class="blob b1"></div><div class="blob b2"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <p class="eyebrow">Research Fellow · ISTI-CNR, Pisa</p>
+      <p class="eyebrow">PhD Student · University of Pisa &amp; ISTI-CNR</p>
       <h1>Francesco Benocci</h1>
-      <p class="rotator">I work on <span id="rotate" class="rot-word">approximate nearest neighbor search</span></p>
+      <p class="rotator">I work on <span id="rotate" class="rot-word">retrieval for agentic search</span></p>
       <div class="icons">
         <a href="mailto:francesco.benocci@isti.cnr.it" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
         <a href="https://github.com/FBenocci" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>GitHub</a>
@@ -83,9 +90,8 @@
         <a href="https://www.linkedin.com/in/francesco-benocci-bb6216389/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4"/></svg>LinkedIn</a>
       </div>
     </div>
-    <div class="avatar">
-      <span>FB</span>
-      <img src="assets/avatar.jpg" alt="Francesco Benocci" onerror="this.remove()">
+    <div class="face">
+      <canvas id="face" role="img" aria-label="Portrait of Francesco Benocci, composed from a graph"></canvas>
     </div>
   </div>
 </header>
@@ -96,17 +102,17 @@
   <h2>About</h2>
   <div class="about-grid">
     <div>
-      <p>I am a Research Fellow at the Institute of Information Science and Technologies (ISTI) of the Italian National Research Council (CNR) in Pisa, where I work in the HORIZON HPC laboratory. My research is on approximate nearest neighbor search, mostly graph-based indexes.</p>
-      <p>My current interest is agentic search, where the queries hitting a retrieval system are issued by LLM agents instead of people, and what that changes in the design of the index.</p>
+      <p>I am a PhD student in Computer Science at the University of Pisa, associated with the Institute of Information Science and Technologies (ISTI) of the Italian National Research Council (CNR). I study retrieval for agentic search: when the queries hitting a retrieval system come from LLM agents, which issue many correlated sub-queries over multiple steps, an index built for one-shot human queries is no longer the right design.</p>
+      <p>Before the PhD I was a Research Fellow at ISTI-CNR, in the HORIZON HPC laboratory, where I worked on approximate nearest neighbor search and the compression of graph-based indexes.</p>
     </div>
     <aside>
       <h3>Research interests</h3>
       <ul class="chips">
+        <li>Agentic search</li>
+        <li>Information retrieval</li>
         <li>Approximate nearest neighbor search</li>
         <li>Graph-based indexes</li>
         <li>Index compression</li>
-        <li>Agentic search</li>
-        <li>Information retrieval</li>
       </ul>
     </aside>
   </div>
@@ -136,10 +142,15 @@
 <section id="experience" class="reveal">
   <h2>Experience</h2>
 
-  <h3 class="sub">Work</h3>
   <ol class="timeline">
     <li>
-      <span class="when">May 2026 – present</span>
+      <span class="when">Nov 2026 – present</span>
+      <div class="what">Ph.D. in Computer Science</div>
+      <div class="where">University of Pisa · associated with ISTI-CNR</div>
+      <p>Retrieval indexes for agentic search workloads.</p>
+    </li>
+    <li>
+      <span class="when">May – Oct 2026</span>
       <div class="what">Research Fellow</div>
       <div class="where">ISTI-CNR, Pisa · HORIZON HPC</div>
       <p>Supervisor: Franco Maria Nardini. Compressed indexes for high-dimensional vectors, graph-based ANN search, and retrieval infrastructure for agentic search workloads.</p>
@@ -158,7 +169,7 @@
     </li>
   </ol>
 
-  <h3 class="sub">Education</h3>
+  <h3 class="sub">Degrees</h3>
   <ol class="timeline">
     <li>
       <span class="when">2023 – 2026</span>
@@ -208,6 +219,7 @@
   <span>Last updated September 2026</span>
 </footer>
 
+<script src="face.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 // Rotating research topics in the hero, theme toggle, reveal on scroll.
 (() => {
   const topics = [
+    'retrieval for agentic search',
     'approximate nearest neighbor search',
     'compressed graph indexes',
-    'retrieval for LLM agents',
     'efficient vector search',
   ];
   const el = document.getElementById('rotate');

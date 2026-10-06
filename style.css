@@ -46,8 +46,8 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 
 /* top bar */
 .topbar { position: fixed; inset: 0 0 auto 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px max(16px, calc((100vw - 868px) / 2)); background: color-mix(in srgb, var(--bg) 80%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
-.brand { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; color: var(--fg); white-space: nowrap; }
-.brand:hover { text-decoration: none; color: var(--accent); }
+.brand { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, #3b5bdb, #e8590c); color: #fff; font-family: var(--serif); font-weight: 700; font-size: 1rem; letter-spacing: .02em; box-shadow: var(--shadow); transition: transform .15s; }
+.brand:hover { text-decoration: none; transform: rotate(-6deg) scale(1.05); }
 .nav-links { display: flex; align-items: center; gap: 20px; font-size: .92rem; }
 .nav-links a { color: var(--muted); }
 .nav-links a:hover, .nav-links a.active { color: var(--fg); text-decoration: none; }
@@ -75,12 +75,14 @@ h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2.5rem, 6.5vw
 .icons { display: flex; gap: 10px; flex-wrap: wrap; }
 .icons a { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px; font-size: .92rem; font-weight: 500; background: var(--card); border: 1px solid var(--line); color: var(--fg); box-shadow: var(--shadow); transition: transform .15s, color .15s, border-color .15s; }
 .icons a:hover { text-decoration: none; transform: translateY(-3px); color: var(--accent); border-color: var(--accent); }
-.avatar { position: relative; flex-shrink: 0; width: 200px; height: 200px; border-radius: 50%; padding: 5px; background: conic-gradient(from 200deg, var(--accent), var(--hot), var(--accent)); box-shadow: var(--shadow); }
-.avatar span, .avatar img { position: absolute; inset: 5px; width: calc(100% - 10px); height: calc(100% - 10px); border-radius: 50%; border: 4px solid var(--bg); }
-.avatar span { display: grid; place-items: center; background: var(--bg-soft); font-family: var(--serif); font-size: 3.4rem; font-weight: 600; color: var(--accent); }
-.avatar img { object-fit: cover; }
-@media (max-width: 720px) { .hero { padding-top: 110px; } .hero-inner { flex-direction: column-reverse; align-items: flex-start; gap: 28px; } .avatar { width: 130px; height: 130px; } .avatar span { font-size: 2.2rem; } }
+@media (max-width: 720px) { .hero { padding-top: 110px; } .hero-inner { flex-direction: column-reverse; align-items: flex-start; gap: 28px; } }
 @media (prefers-reduced-motion: reduce) { .blob { animation: none; } }
+
+/* face graph */
+.face { position: relative; flex-shrink: 0; width: 280px; height: 280px; }
+.face::before { content: ""; position: absolute; inset: -14%; border-radius: 50%; background: radial-gradient(circle, var(--accent-soft), transparent 70%); }
+.face canvas { position: relative; width: 100%; height: 100%; display: block; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px var(--card), 0 0 0 5px var(--line), var(--shadow); cursor: crosshair; }
+@media (max-width: 720px) { .face { width: 200px; height: 200px; } }
 
 /* sections */
 main { max-width: 900px; margin: 0 auto; padding: 0 16px; }
@@ -165,7 +167,7 @@ footer { max-width: 900px; margin: 30px auto 0; padding: 26px 16px 40px; border-
   #contact { break-inside: avoid; }
   :root { --bg: #fff; --card: #fff; --fg: #000; --muted: #333; --line: #ccc; --accent: #000; --hot: #000; --shadow: none; }
   body { font-size: 11pt; }
-  .topbar, .blob, .hero::after, .theme-toggle, .avatar, .card-arrow, .pub-links details { display: none !important; }
+  .topbar, .blob, .hero::after, .theme-toggle, .face, .card-arrow, .pub-links details { display: none !important; }
   .hero { padding: 0 0 12px; }
   .rotator { min-height: 0; margin: 8px 0; }
   .icons a { box-shadow: none; border: none; padding: 0 12px 0 0; }
